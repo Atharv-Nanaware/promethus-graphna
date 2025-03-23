@@ -1,0 +1,53 @@
+---
+lowercaseOutputName: true
+lowercaseOutputLabelNames: true
+whitelistObjectNames:
+  - org.apache.cassandra.metrics:*
+  - java.lang:type=GarbageCollector,name=*
+  - java.lang:type=Memory
+  - java.lang:type=MemoryPool,name=*
+blacklistObjectNames:
+  - org.apache.cassandra.metrics:type=ColumnFamily,*
+  - org.apache.cassandra.metrics:type=Table,*
+rules:
+  # Cassandra metrics
+  - pattern: org.apache.cassandra.metrics<type=(\w+), name=(\w+)><>Value
+    name: cassandra_$1_$2
+    type: GAUGE
+  - pattern: org.apache.cassandra.metrics<type=(\w+), name=(\w+)><>OneMinuteRate
+    name: cassandra_$1_$2_rate
+    type: GAUGE
+  - pattern: org.apache.cassandra.metrics<type=(\w+), name=(\w+)><>Count
+    name: cassandra_$1_$2_count
+    type: COUNTER
+  # Cassandra metrics for tables
+  - pattern: org.apache.cassandra.metrics<type=Table, keyspace=(\w+), scope=(\w+), name=(\w+)><>Value
+    name: cassandra_table_$3
+    type: GAUGE
+    labels:
+      keyspace: "$1"
+      table: "$2"
+  - pattern: org.apache.cassandra.metrics<type=Table, keyspace=(\w+), scope=(\w+), name=(\w+)><>Count
+    name: cassandra_table_$3_count
+    type: COUNTER
+    labels:
+      keyspace: "$1"
+      table: "$2"
+  # JVM GC metrics
+  - pattern: java.lang<type=GarbageCollector, name=(.+)><>CollectionCount
+    name: jvm_gc_collection_count
+    type: COUNTER
+    labels:
+      gc: "$1"
+  - pattern: java.lang<type=GarbageCollector, name=(.+)><>CollectionTime
+    name: jvm_gc_collection_time_ms
+    type: COUNTER
+    labels:
+      gc: "$1"
+  # JVM memory metrics
+  - pattern: java.lang<type=Memory><HeapMemoryUsage>(\w+)
+    name: jvm_memory_heap_$1_bytes
+    type: GAUGE
+  - pattern: java.lang<type=Memory><NonHeapMemoryUsage>(\w+)
+    name: jvm_memory_non_heap_$1_bytes
+    type: GAUGE

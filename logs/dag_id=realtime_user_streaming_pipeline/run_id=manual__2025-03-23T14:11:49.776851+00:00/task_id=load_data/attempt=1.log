@@ -1,0 +1,127 @@
+[2025-03-23T14:11:53.905+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-23T14:11:53.949+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: realtime_user_streaming_pipeline.load_data manual__2025-03-23T14:11:49.776851+00:00 [queued]>
+[2025-03-23T14:11:53.958+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: realtime_user_streaming_pipeline.load_data manual__2025-03-23T14:11:49.776851+00:00 [queued]>
+[2025-03-23T14:11:53.959+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2025-03-23T14:11:53.969+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_data> on 2025-03-23 14:11:49.776851+00:00
+[2025-03-23T14:11:53.982+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'realtime_user_streaming_pipeline', 'load_data', 'manual__2025-03-23T14:11:49.776851+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/realtime_streaming.py', '--cfg-path', '/tmp/tmpa4xzm8x3']
+[2025-03-23T14:11:53.991+0000] {standard_task_runner.py:91} INFO - Job 15: Subtask load_data
+[2025-03-23T14:11:53.996+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=307) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-23T14:11:53.999+0000] {standard_task_runner.py:64} INFO - Started process 316 to run task
+[2025-03-23T14:11:54.058+0000] {task_command.py:426} INFO - Running <TaskInstance: realtime_user_streaming_pipeline.load_data manual__2025-03-23T14:11:49.776851+00:00 [running]> on host 76911cf2b4bd
+[2025-03-23T14:11:54.149+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='realtime_user_streaming_pipeline' AIRFLOW_CTX_TASK_ID='load_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-23T14:11:49.776851+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-23T14:11:49.776851+00:00'
+[2025-03-23T14:11:54.154+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-23T14:11:54.205+0000] {conn.py:362} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.18.0.11', 9092)]>: connecting to broker:9092 [('172.18.0.11', 9092) IPv4]
+[2025-03-23T14:11:54.205+0000] {conn.py:957} INFO - Probing node bootstrap-0 broker version
+[2025-03-23T14:11:54.207+0000] {conn.py:393} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connecting> [IPv4 ('172.18.0.11', 9092)]>: Connection complete.
+[2025-03-23T14:11:54.311+0000] {conn.py:1019} INFO - Broker version identified as 2.6.0
+[2025-03-23T14:11:54.312+0000] {conn.py:1020} INFO - Set configuration api_version=(2, 6, 0) to skip auto check_version requests on startup
+[2025-03-23T14:11:54.327+0000] {etl_pipeline.py:65} INFO - Sent user lazymeercat317 to Kafka.
+[2025-03-23T14:11:54.329+0000] {etl_pipeline.py:65} INFO - Sent user smallfrog867 to Kafka.
+[2025-03-23T14:11:54.330+0000] {etl_pipeline.py:65} INFO - Sent user goldentiger885 to Kafka.
+[2025-03-23T14:11:54.332+0000] {etl_pipeline.py:65} INFO - Sent user smallrabbit696 to Kafka.
+[2025-03-23T14:11:54.331+0000] {conn.py:362} INFO - <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.18.0.11', 9092)]>: connecting to broker:9092 [('172.18.0.11', 9092) IPv4]
+[2025-03-23T14:11:54.333+0000] {etl_pipeline.py:65} INFO - Sent user heavybird545 to Kafka.
+[2025-03-23T14:11:54.334+0000] {etl_pipeline.py:65} INFO - Sent user yellowpeacock773 to Kafka.
+[2025-03-23T14:11:54.335+0000] {etl_pipeline.py:65} INFO - Sent user beautifulwolf668 to Kafka.
+[2025-03-23T14:11:54.334+0000] {conn.py:393} INFO - <BrokerConnection node_id=1 host=broker:9092 <connecting> [IPv4 ('172.18.0.11', 9092)]>: Connection complete.
+[2025-03-23T14:11:54.336+0000] {etl_pipeline.py:65} INFO - Sent user angryfrog494 to Kafka.
+[2025-03-23T14:11:54.336+0000] {conn.py:673} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:9092 <connected> [IPv4 ('172.18.0.11', 9092)]>: Closing connection. 
+[2025-03-23T14:11:54.337+0000] {etl_pipeline.py:65} INFO - Sent user tinywolf679 to Kafka.
+[2025-03-23T14:11:54.342+0000] {etl_pipeline.py:65} INFO - Sent user crazymeercat103 to Kafka.
+[2025-03-23T14:11:54.343+0000] {etl_pipeline.py:65} INFO - Sent user happyfish127 to Kafka.
+[2025-03-23T14:11:54.344+0000] {etl_pipeline.py:65} INFO - Sent user bigdog796 to Kafka.
+[2025-03-23T14:11:54.346+0000] {etl_pipeline.py:65} INFO - Sent user smallgorilla825 to Kafka.
+[2025-03-23T14:11:54.349+0000] {etl_pipeline.py:65} INFO - Sent user brownzebra211 to Kafka.
+[2025-03-23T14:11:54.351+0000] {etl_pipeline.py:65} INFO - Sent user organicostrich343 to Kafka.
+[2025-03-23T14:11:54.352+0000] {etl_pipeline.py:65} INFO - Sent user organicleopard414 to Kafka.
+[2025-03-23T14:11:54.354+0000] {etl_pipeline.py:65} INFO - Sent user yellowmouse983 to Kafka.
+[2025-03-23T14:11:54.357+0000] {etl_pipeline.py:65} INFO - Sent user whitetiger674 to Kafka.
+[2025-03-23T14:11:54.357+0000] {etl_pipeline.py:65} INFO - Sent user angrybear679 to Kafka.
+[2025-03-23T14:11:54.358+0000] {etl_pipeline.py:65} INFO - Sent user beautifulswan581 to Kafka.
+[2025-03-23T14:11:54.360+0000] {etl_pipeline.py:65} INFO - Sent user silverostrich674 to Kafka.
+[2025-03-23T14:11:54.361+0000] {etl_pipeline.py:65} INFO - Sent user beautifulbutterfly565 to Kafka.
+[2025-03-23T14:11:54.361+0000] {etl_pipeline.py:65} INFO - Sent user bluecat334 to Kafka.
+[2025-03-23T14:11:54.365+0000] {etl_pipeline.py:65} INFO - Sent user purplemeercat280 to Kafka.
+[2025-03-23T14:11:54.366+0000] {etl_pipeline.py:65} INFO - Sent user purpletiger143 to Kafka.
+[2025-03-23T14:11:54.368+0000] {etl_pipeline.py:65} INFO - Sent user brownfrog949 to Kafka.
+[2025-03-23T14:11:54.377+0000] {etl_pipeline.py:65} INFO - Sent user browncat920 to Kafka.
+[2025-03-23T14:11:54.378+0000] {etl_pipeline.py:65} INFO - Sent user happytiger368 to Kafka.
+[2025-03-23T14:11:54.379+0000] {etl_pipeline.py:65} INFO - Sent user crazygoose714 to Kafka.
+[2025-03-23T14:11:54.380+0000] {etl_pipeline.py:65} INFO - Sent user organicmouse939 to Kafka.
+[2025-03-23T14:11:54.380+0000] {etl_pipeline.py:65} INFO - Sent user orangemeercat533 to Kafka.
+[2025-03-23T14:11:54.385+0000] {etl_pipeline.py:65} INFO - Sent user bigleopard646 to Kafka.
+[2025-03-23T14:11:54.386+0000] {etl_pipeline.py:65} INFO - Sent user orangepeacock697 to Kafka.
+[2025-03-23T14:11:54.386+0000] {etl_pipeline.py:65} INFO - Sent user purplegorilla245 to Kafka.
+[2025-03-23T14:11:54.390+0000] {etl_pipeline.py:65} INFO - Sent user tinyladybug884 to Kafka.
+[2025-03-23T14:11:54.393+0000] {etl_pipeline.py:65} INFO - Sent user smallgoose756 to Kafka.
+[2025-03-23T14:11:54.401+0000] {etl_pipeline.py:65} INFO - Sent user orangefrog524 to Kafka.
+[2025-03-23T14:11:54.407+0000] {etl_pipeline.py:65} INFO - Sent user happybutterfly578 to Kafka.
+[2025-03-23T14:11:54.411+0000] {etl_pipeline.py:65} INFO - Sent user greencat475 to Kafka.
+[2025-03-23T14:11:54.413+0000] {etl_pipeline.py:65} INFO - Sent user whitepanda937 to Kafka.
+[2025-03-23T14:11:54.413+0000] {etl_pipeline.py:65} INFO - Sent user angryostrich949 to Kafka.
+[2025-03-23T14:11:54.414+0000] {etl_pipeline.py:65} INFO - Sent user blackpeacock884 to Kafka.
+[2025-03-23T14:11:54.425+0000] {etl_pipeline.py:65} INFO - Sent user crazykoala359 to Kafka.
+[2025-03-23T14:11:54.427+0000] {etl_pipeline.py:65} INFO - Sent user orangezebra760 to Kafka.
+[2025-03-23T14:11:54.428+0000] {etl_pipeline.py:65} INFO - Sent user smallwolf682 to Kafka.
+[2025-03-23T14:11:54.429+0000] {etl_pipeline.py:65} INFO - Sent user purpleduck513 to Kafka.
+[2025-03-23T14:11:54.430+0000] {etl_pipeline.py:65} INFO - Sent user heavyduck780 to Kafka.
+[2025-03-23T14:11:54.431+0000] {etl_pipeline.py:65} INFO - Sent user beautifulbear156 to Kafka.
+[2025-03-23T14:11:54.432+0000] {etl_pipeline.py:65} INFO - Sent user organicelephant237 to Kafka.
+[2025-03-23T14:11:54.437+0000] {etl_pipeline.py:65} INFO - Sent user redfish608 to Kafka.
+[2025-03-23T14:11:54.440+0000] {etl_pipeline.py:65} INFO - Sent user organicsnake954 to Kafka.
+[2025-03-23T14:11:54.448+0000] {etl_pipeline.py:65} INFO - Sent user heavymouse175 to Kafka.
+[2025-03-23T14:11:54.449+0000] {etl_pipeline.py:65} INFO - Sent user happybutterfly278 to Kafka.
+[2025-03-23T14:11:54.450+0000] {etl_pipeline.py:65} INFO - Sent user greenrabbit899 to Kafka.
+[2025-03-23T14:11:54.452+0000] {etl_pipeline.py:65} INFO - Sent user lazymouse519 to Kafka.
+[2025-03-23T14:11:54.454+0000] {etl_pipeline.py:65} INFO - Sent user lazypanda237 to Kafka.
+[2025-03-23T14:11:54.456+0000] {etl_pipeline.py:65} INFO - Sent user bluesnake393 to Kafka.
+[2025-03-23T14:11:54.457+0000] {etl_pipeline.py:65} INFO - Sent user orangeswan236 to Kafka.
+[2025-03-23T14:11:54.457+0000] {etl_pipeline.py:65} INFO - Sent user smallladybug571 to Kafka.
+[2025-03-23T14:11:54.457+0000] {etl_pipeline.py:65} INFO - Sent user happybear642 to Kafka.
+[2025-03-23T14:11:54.458+0000] {etl_pipeline.py:65} INFO - Sent user whiterabbit998 to Kafka.
+[2025-03-23T14:11:54.459+0000] {etl_pipeline.py:65} INFO - Sent user goldenbird677 to Kafka.
+[2025-03-23T14:11:54.461+0000] {etl_pipeline.py:65} INFO - Sent user beautifulgorilla719 to Kafka.
+[2025-03-23T14:11:54.463+0000] {etl_pipeline.py:65} INFO - Sent user whiteduck499 to Kafka.
+[2025-03-23T14:11:54.464+0000] {etl_pipeline.py:65} INFO - Sent user tinyzebra950 to Kafka.
+[2025-03-23T14:11:54.465+0000] {etl_pipeline.py:65} INFO - Sent user tinypeacock559 to Kafka.
+[2025-03-23T14:11:54.467+0000] {etl_pipeline.py:65} INFO - Sent user bigrabbit637 to Kafka.
+[2025-03-23T14:11:54.469+0000] {etl_pipeline.py:65} INFO - Sent user ticklishostrich244 to Kafka.
+[2025-03-23T14:11:54.474+0000] {etl_pipeline.py:65} INFO - Sent user goldenleopard544 to Kafka.
+[2025-03-23T14:11:54.476+0000] {etl_pipeline.py:65} INFO - Sent user smallelephant423 to Kafka.
+[2025-03-23T14:11:54.479+0000] {etl_pipeline.py:65} INFO - Sent user lazytiger470 to Kafka.
+[2025-03-23T14:11:54.484+0000] {etl_pipeline.py:65} INFO - Sent user bluefish312 to Kafka.
+[2025-03-23T14:11:54.487+0000] {etl_pipeline.py:65} INFO - Sent user organicfish292 to Kafka.
+[2025-03-23T14:11:54.489+0000] {etl_pipeline.py:65} INFO - Sent user heavykoala487 to Kafka.
+[2025-03-23T14:11:54.491+0000] {etl_pipeline.py:65} INFO - Sent user ticklishostrich485 to Kafka.
+[2025-03-23T14:11:54.494+0000] {etl_pipeline.py:65} INFO - Sent user crazybutterfly865 to Kafka.
+[2025-03-23T14:11:54.501+0000] {etl_pipeline.py:65} INFO - Sent user heavyostrich169 to Kafka.
+[2025-03-23T14:11:54.503+0000] {etl_pipeline.py:65} INFO - Sent user lazybear119 to Kafka.
+[2025-03-23T14:11:54.514+0000] {etl_pipeline.py:65} INFO - Sent user crazypanda722 to Kafka.
+[2025-03-23T14:11:54.516+0000] {etl_pipeline.py:65} INFO - Sent user yellowostrich184 to Kafka.
+[2025-03-23T14:11:54.519+0000] {etl_pipeline.py:65} INFO - Sent user blackladybug608 to Kafka.
+[2025-03-23T14:11:54.523+0000] {etl_pipeline.py:65} INFO - Sent user organicleopard562 to Kafka.
+[2025-03-23T14:11:54.526+0000] {etl_pipeline.py:65} INFO - Sent user beautifulelephant102 to Kafka.
+[2025-03-23T14:11:54.530+0000] {etl_pipeline.py:65} INFO - Sent user happybutterfly611 to Kafka.
+[2025-03-23T14:11:54.533+0000] {etl_pipeline.py:65} INFO - Sent user orangegorilla990 to Kafka.
+[2025-03-23T14:11:54.535+0000] {etl_pipeline.py:65} INFO - Sent user greencat698 to Kafka.
+[2025-03-23T14:11:54.536+0000] {etl_pipeline.py:65} INFO - Sent user crazylion720 to Kafka.
+[2025-03-23T14:11:54.540+0000] {etl_pipeline.py:65} INFO - Sent user redgorilla129 to Kafka.
+[2025-03-23T14:11:54.542+0000] {etl_pipeline.py:65} INFO - Sent user beautifulwolf804 to Kafka.
+[2025-03-23T14:11:54.543+0000] {etl_pipeline.py:65} INFO - Sent user organicgorilla619 to Kafka.
+[2025-03-23T14:11:54.544+0000] {etl_pipeline.py:65} INFO - Sent user purplebear172 to Kafka.
+[2025-03-23T14:11:54.545+0000] {etl_pipeline.py:65} INFO - Sent user tinyfrog663 to Kafka.
+[2025-03-23T14:11:54.546+0000] {etl_pipeline.py:65} INFO - Sent user organicmouse570 to Kafka.
+[2025-03-23T14:11:54.547+0000] {etl_pipeline.py:65} INFO - Sent user angrygoose237 to Kafka.
+[2025-03-23T14:11:54.547+0000] {etl_pipeline.py:65} INFO - Sent user goldenleopard517 to Kafka.
+[2025-03-23T14:11:54.548+0000] {etl_pipeline.py:65} INFO - Sent user whitepanda909 to Kafka.
+[2025-03-23T14:11:54.552+0000] {etl_pipeline.py:65} INFO - Sent user smallelephant659 to Kafka.
+[2025-03-23T14:11:54.554+0000] {etl_pipeline.py:65} INFO - Sent user crazygoose501 to Kafka.
+[2025-03-23T14:11:54.557+0000] {etl_pipeline.py:65} INFO - Sent user happyelephant772 to Kafka.
+[2025-03-23T14:11:54.557+0000] {etl_pipeline.py:65} INFO - Sent user smallfish164 to Kafka.
+[2025-03-23T14:11:54.588+0000] {etl_pipeline.py:68} INFO - Successfully sent 100 users to Kafka.
+[2025-03-23T14:11:54.592+0000] {conn.py:673} INFO - <BrokerConnection node_id=1 host=broker:9092 <connected> [IPv4 ('172.18.0.11', 9092)]>: Closing connection. 
+[2025-03-23T14:11:54.620+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-03-23T14:11:54.623+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-23T14:11:54.679+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=realtime_user_streaming_pipeline, task_id=load_data, run_id=manual__2025-03-23T14:11:49.776851+00:00, execution_date=20250323T141149, start_date=20250323T141153, end_date=20250323T141154
+[2025-03-23T14:11:54.774+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-03-23T14:11:54.836+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

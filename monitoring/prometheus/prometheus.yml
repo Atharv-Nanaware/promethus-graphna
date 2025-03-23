@@ -31,21 +31,30 @@ scrape_configs:
       - targets: ["airflow-webserver:8080"]
         labels:
           service: "airflow-webserver"
+    
+  - job_name: "airflow-scheduler"
+    metrics_path: /metrics
+    static_configs:
       - targets: ["airflow-scheduler:8974"]
         labels:
           service: "airflow-scheduler"
 
-  - job_name: "spark"
+  - job_name: "spark-master"
+    metrics_path: /metrics
     static_configs:
-      - targets: ["spark-master:7077"]
+      - targets: ["spark-master:8080"]
         labels:
           service: "spark-master"
-      - targets: ["spark-worker:7077"]
+    
+  - job_name: "spark-worker"
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["spark-worker:8081"]
         labels:
           service: "spark-worker"
 
   - job_name: "cassandra"
     static_configs:
-      - targets: ["cassandra_db:9042"]
+      - targets: ["cassandra:7070"]
         labels:
           service: "cassandra"
